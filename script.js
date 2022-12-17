@@ -11,7 +11,7 @@
 var country= document.getElementById("country").Value;
 //const url='http://api.openweathermap.org/data/2.5/forecast?q=canada&appid=826c4a5299f1929f7d07c483556cc38d&cnt=10&units=imperial&lang=en';
 
-const url='https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=826c4a5299f1929f7d07c483556cc38d';
+const url='https://api.openweathermap.org/data/2.5/forecast?q=canada&appid=826c4a5299f1929f7d07c483556cc38d';
 
 var search=document.getElementById("search");
 
