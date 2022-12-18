@@ -4,46 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <input id="country">
-    <button id="search">Search</button>
 
+    <header class="header">Weather Dashboard</header>
+
+    <div class="navbar">
+        <input id="country" type="text" placeholder="country"  onfocus="this.value=''">
+        <button id="search">Search</button>
+    </div>
+    
+<section class="forecastdata">
 <div id="data1">
-    <li id="date1"></div>
-    <li id="pressure1"></li>
-    <li id="humidity1"></li>
-    <li id="temp1"></li><br>
+    <p id="date1"></p>
+    <p id="wind1"></p>
+    <p id="humidity1"></p>
+    <p id="temp1"></p><br>
 </div>
 
 <div id="data2">
-    <li id="date2"></div>
-    <li id="pressure2"></li>
-    <li id="humidity2"></li>
-    <li id="temp2"></li><br>
+    <p id="date2"></p>
+    <p id="wind2"></p>
+    <p id="humidity2"></p>
+    <p id="temp2"></p><br>
 </div>
 
 <div id="data3">
-    <li id="date3"></div>
-    <li id="pressure3"></li>
-    <li id="humidity3"></li>
-    <li id="temp3"></li><br>
+    <p id="date3"></p>
+    <p id="wind3"></p>
+    <p id="humidity3"></p>
+    <p id="temp3"></p><br>
 </div>
 
 <div id="data4">
-    <li id="date4"></div>
-    <li id="pressure4"></li>
-    <li id="humidity4"></li>
-    <li id="temp4"></li><br>
+    <p id="date4"></p>
+    <p id="wind4"></p>
+    <p id="humidity4"></p>
+    <p id="temp4"></p><br>
 </div>
 
 <div id="data5">
-    <li id="date5"></div>
-    <li id="pressure5"></li>
-    <li id="humidity5"></li>
-    <li id="temp5"></li><br>
+    <p id="date5"></p>
+    <p id="wind5"></p>
+    <p id="humidity5"></p>
+    <p id="temp5"></p><br>
 </div>
+</section>
     <script src="script.js"></script>
 </body>
 </html>

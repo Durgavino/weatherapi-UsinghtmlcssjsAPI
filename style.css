@@ -1,0 +1,32 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color: black;
+}
+.header{
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+}
+.navbar{
+    background-color: white;
+    padding-top: 60px;
+    border-radius: 6px;
+    display: flex;
+}
+
+#country{
+   text-align: left;
+    margin: auto;
+  margin-bottom: 50px;
+  display: block;
+  flex-grow: 1;
+ 
+}
+.forecastdata{
+    color: white;
+}
