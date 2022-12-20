@@ -91,3 +91,28 @@ function getdata() {
 }
 
 getdata();
+
+search.addEventListener('click',save);
+
+function save(){
+    var storedsearch=localStorage.getItem('country');
+    var country = document.getElementById("country").value;
+
+    if(storedsearch){
+        storedsearch.push(country);
+
+    }
+    else{
+        storedsearch=[country];
+    }
+    localStorage.setItem(country,JSON.stringify(storedsearch));
+}
+
+function get(){
+    var storedsearch=localStorage.getItem('country');
+    if(storedsearch){
+        document.getElementById('country').value=storedsearch;
+    }
+    localStorage.getItem('country',JSON.parse(storedsearch));
+}
+get();
