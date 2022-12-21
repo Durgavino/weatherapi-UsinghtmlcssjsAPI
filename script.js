@@ -114,41 +114,4 @@ searchresult.innerHTML=(localStorage.getItem("result"));
 getdata();
 
 
-// var searchresult=document.getElementById("searchresult");
 
-// function setdata(){
-//     let arrayvalue=JSON.parse(localStorage.getItem("result")) || [];
-//     var countryresult=document.getElementById("country").value;
-//     arrayvalue.push(countryresult)
-
-//     localStorage.setItem('result',JSON.stringify(arrayvalue));
-
-//     for (let i=0; i<arrayvalue.length; i++)
-//     {
-//         let li=document.createElement("li");
-//         li.textContent=arrayvalue[i]
-
-//         searchresult.appendChild(li);
-//         console.log(searchresult);
-//     }
-// }
-
-// setdata();
-
-
-    
-var searchresult=document.getElementById("searchresult");
-var input=document.getElementById("country").value;
-
-searchresult.innerHTML=(localStorage.getItem("result"));
-
-function setdata(){
-    
-
-
-localStorage.setItem("result",input);
-
-searchresult.innerHTML=(localStorage.getItem("result"));
-
-}
-setdata();
