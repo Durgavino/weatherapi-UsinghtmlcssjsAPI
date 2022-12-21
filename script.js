@@ -8,6 +8,7 @@ var search = document.getElementById('search');
 function getdata() {
     search.addEventListener("click", function () {
        
+        var country=document.getElementById("country").value;
 
        
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
