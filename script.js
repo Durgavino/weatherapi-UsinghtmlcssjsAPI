@@ -7,28 +7,11 @@ var search = document.getElementById('search');
 
 function getdata() {
     search.addEventListener("click", function () {
-        var country = document.getElementById("country").value;
+       
 
-        //searchresult.innerHTML = countryresult.value;
-
-        //console.log(country);
+       
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
-        // var storedvalue = localStorage.getItem('country');
-        // var countryresult = document.getElementById("country").value;
-
-
-        // if (storedvalue) {
-        //     storedvalue.push(countryresult);
-
-        // }
-        // else {
-        //     storedvalue = [countryresult];
-        // }
-
-        // localStorage.setItem('countryresult', JSON.stringify(storedvalue));
-
-
-        // console.log(url);
+        
         fetch(url)
             // fetch(apiUrl)
             .then(function (res) {
@@ -116,28 +99,24 @@ getdata();
 
 
 
-search.addEventListener('click',save);
 
-function save(){
-    var storedsearch=localStorage.getItem('country');
-     var country = document.getElementById("country").value;
 
-   if(storedsearch){
-        storedsearch.push(country);
 
-     }
-     else{
-         storedsearch=[country];
-     }
-     localStorage.setItem(country,JSON.stringify(storedsearch));
-}
 
- function get(){
-    var storedsearch=localStorage.getItem('country');
-     if(storedsearch){
-        document.getElementById('country').value=storedsearch;
-     }
-    localStorage.getItem('country',JSON.parse(storedsearch));
-    var storedsearch=JSON.parse(localStorage.getItem('country'));
- }
-get();
+
+// function setdata(){
+//     let arrayvalue=JSON.parse(localStorage.getItem("result")) || []
+//     var country=document.getElementById("country").value;
+//     arrayvalue.push(country)
+
+//     localStorage.setItem('result',JSON.stringify(arrayvalue));
+
+//     for (let i=0; i<arrayvalue.length; i++)
+//     {
+//         let li=document.createElement("li");
+//         li.textContent=arrayvalue[i]
+
+//         li.appendChild(li);
+//     }
+// }
+// //setdata();
