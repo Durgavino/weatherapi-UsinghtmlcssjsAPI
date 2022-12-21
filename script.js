@@ -2,14 +2,31 @@
 //key=826c4a5299f1929f7d07c483556cc38d
 
 
+
+var search = document.getElementById('search');
+
 function getdata() {
     search.addEventListener("click", function () {
         var country = document.getElementById("country").value;
-        var countryresult = document.getElementById("country");
-        searchresult.innerHTML = countryresult.value;
+
+        //searchresult.innerHTML = countryresult.value;
 
         //console.log(country);
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
+        // var storedvalue = localStorage.getItem('country');
+        // var countryresult = document.getElementById("country").value;
+
+
+        // if (storedvalue) {
+        //     storedvalue.push(countryresult);
+
+        // }
+        // else {
+        //     storedvalue = [countryresult];
+        // }
+
+        // localStorage.setItem('countryresult', JSON.stringify(storedvalue));
+
 
         // console.log(url);
         fetch(url)
@@ -96,3 +113,31 @@ function getdata() {
 }
 
 getdata();
+
+
+
+search.addEventListener('click',save);
+
+function save(){
+    var storedsearch=localStorage.getItem('country');
+     var country = document.getElementById("country").value;
+
+   if(storedsearch){
+        storedsearch.push(country);
+
+     }
+     else{
+         storedsearch=[country];
+     }
+     localStorage.setItem(country,JSON.stringify(storedsearch));
+}
+
+ function get(){
+    var storedsearch=localStorage.getItem('country');
+     if(storedsearch){
+        document.getElementById('country').value=storedsearch;
+     }
+    localStorage.getItem('country',JSON.parse(storedsearch));
+    var storedsearch=JSON.parse(localStorage.getItem('country'));
+ }
+get();
