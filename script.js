@@ -5,27 +5,23 @@
 
 var search = document.getElementById('search');
 
+
+
 function getdata() {
     search.addEventListener("click", function () {
-       
-        var country=document.getElementById("country").value;
 
-       
-var searchresult=document.getElementById("searchresult");
+        var country = document.getElementById("country").value;
+
+  var searchresult = document.getElementById("searchresult");
 
 
-searchresult.innerHTML=(localStorage.getItem("result"));
+
+    searchresult.innerHTML = (localStorage.getItem("result"));
+
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
-        
 
-
-
-        
-
-localStorage.setItem("result",country);
-
-searchresult.innerHTML=(localStorage.getItem("result"));
-
+localStorage.setItem("result", country);
+       searchresult.innerHTML = (localStorage.getItem("result"));
 
 
         fetch(url)
@@ -112,6 +108,4 @@ searchresult.innerHTML=(localStorage.getItem("result"));
 }
 
 getdata();
-
-
 
