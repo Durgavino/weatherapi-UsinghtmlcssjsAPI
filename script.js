@@ -14,19 +14,19 @@ function getdata() {
 
         var searchresult = document.getElementById("searchresult");
 
-        const arrayvalue = [];
-        arrayvalue.push(country);
+   
+    var countryarray=localStorage.getItem("key");
+    if(!countryarray){
+        countryarray=[country];
+    }
+    else{
+        countryarray=JSON.parse(countryarray);
+        countryarray.push(country);
+    }
 
-      //  searchresult.innerHTML = (localStorage.getItem("result"));
+    localStorage.setItem("key",JSON.stringify(countryarray));
 
-       
-        localStorage.setItem("result",JSON.stringify(arrayvalue));
-        var storeresult=JSON.parse(localStorage.getItem("arrayvalue"));
-
-        searchresult.innerHTML = (localStorage.getItem("result"));
-        //searchresult.innerHTML = (localStorage.getItem("arrayvalue"));
-
-
+    searchresult.innerHTML=(localStorage.getItem("key"));
 
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
 
