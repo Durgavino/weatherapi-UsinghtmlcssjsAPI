@@ -4,7 +4,8 @@
   }
   
   body{
-    background-color: black;
+   /*  background-color: black; */
+   background-image:url("./images/b1.jpg");
 }
 .header{
     padding-top: 50px;
@@ -14,22 +15,47 @@
 }
 .navbar{
     background-color: white;
-    padding-top: 60px;
+    padding-top: 50px;
     border-radius: 6px;
-    display: flex;
+    /* display: flex; */
+   width: 50%;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.input{
+    width: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    border: 2px solid black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.search{
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 18px;
+    border-radius: 6px;
 }
 
-#country{
-   text-align: left;
-    margin: auto;
-  margin-bottom: 50px;
-  display: block;
-  flex-grow: 1;
- 
-}
+
 .forecastdata{
     color: white;
 }
 .searchresult{
     color: red;
+}
+
+.currentweather{
+    background-color: black;
+    width: 300px;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+    color: white;
+   border-radius: 6px;
+   position: static;
+   margin-left: 1000px;
+   margin-top: 1px;
+
 }
