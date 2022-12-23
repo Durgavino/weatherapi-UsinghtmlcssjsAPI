@@ -26,11 +26,18 @@ function getdata() {
             //new item
             var x = document.createElement("button");
 
-            x.textContent = countryarray[i];
+            var uniquearray=Array.from(new Set(countryarray));
+            console.log(uniquearray);
+
+          x.textContent = countryarray[i];
+         
+          
             //  console.log(x);
             //  console.log(countryarray[i]);
+
             searchresult.appendChild(x);
 
+           
 
             x.style.color = "black";
             x.style.backgroundColor = "green";
@@ -119,7 +126,9 @@ function handleSearchHistoryClick(e) {
         return;
     } else {
         // set search bar to country name and then re-call your weather function by passing in new country name 
-        var country = document.getElementById("country").value;
+        //var country = document.getElementById("country").value;
+
+        var country=e.target.textContent;
 
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
 
@@ -142,6 +151,8 @@ fetch(url)
                 document.getElementById("wind1").innerHTML = "Wind:" + wind1 + " MPS";
                 document.getElementById("humidity1").innerHTML = "Humidity:" + humidity1 + "%";
                 document.getElementById("temp1").innerHTML = "Temp:" + temp1 + " °F";
+                console.log(humidity1);
+
 
                 date2 = (weatherdata[8].dt_txt);
                 wind2 = (weatherdata[8].wind.speed);
