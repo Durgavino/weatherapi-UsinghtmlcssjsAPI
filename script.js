@@ -21,13 +21,16 @@ function getdata() {
         }
 
         localStorage.setItem("key", JSON.stringify(countryarray));
+        
+//the container is emptied before appending.
+        searchresult.innerHTML="";
 
         for (let i = 0; i < countryarray.length; i++) {
             //new item
             var x = document.createElement("button");
 
-            var uniquearray=Array.from(new Set(countryarray));
-            console.log(uniquearray);
+            // var uniquearray=Array.from(new Set(countryarray));
+            // console.log(uniquearray);
 
           x.textContent = countryarray[i];
          
