@@ -34,8 +34,10 @@ function getdata() {
 
             x.style.color = "black";
             x.style.backgroundColor = "green";
-        }
+            x.setAttribute("class", "btn-history");
 
+           
+        }
         const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
 
         fetch(url)
@@ -108,3 +110,47 @@ function getdata() {
 
 getdata();
 
+
+
+searchresult.addEventListener('click',handleSearchHistoryClick);
+function handleSearchHistoryClick(e) {
+    // Don't do search if current elements is not a search history button
+    if (!e.target.matches('.btn-history')) {
+        return;
+    } else {
+        // set search bar to country name and then re-call your weather function by passing in new country name 
+        var country = document.getElementById("country").value;
+
+        const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
+
+fetch(url)
+            // fetch(apiUrl)
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                //   renderItems(city, data);
+                console.log(data);
+                var weatherdata = data.list;
+                console.log(weatherdata);
+               
+                date1 = (weatherdata[0].dt_txt);
+                wind1 = (weatherdata[0].wind.speed);
+                humidity1 = (weatherdata[0].main.humidity);
+                temp1 = (weatherdata[0].main.temp);
+                document.getElementById("date1").innerHTML = date1;
+                document.getElementById("wind1").innerHTML = "Wind:" + wind1 + " MPS";
+                document.getElementById("humidity1").innerHTML = "Humidity:" + humidity1 + "%";
+                document.getElementById("temp1").innerHTML = "Temp:" + temp1 + " °F";
+
+            })
+
+            .catch(function (err) {
+                console.log(err);
+
+            }
+            )
+
+
+    }
+}
