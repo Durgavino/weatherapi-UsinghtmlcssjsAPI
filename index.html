@@ -12,7 +12,7 @@
     <header class="header">Weather Dashboard</header>
 
     <div class="navbar">
-        <input id="country" class="input" type="text" placeholder="country" >
+        <input id="country" class="input" type="text" placeholder="country" onfocus="this.value=''";>
         <button id="search" class="search" >Search</button>
     </div>
     
@@ -24,7 +24,7 @@
 
 
 
-<section class="forecastdata">
+<section class="forecastdata" >
 <div id="data1" class="currentweather">
     <p id="date1"></p>
     <p id="wind1"></p>
@@ -33,7 +33,9 @@
     <p id="temp1"></p><br>
 </div>
 
-<div id="data2" class="futureweather">
+<div class="futureweatherdiv">
+    
+    <div id="data2" class="futureweather">
     <p id="date2"></p>
     <p id="wind2"></p>
     <img id="icon2">
@@ -64,6 +66,8 @@
     <p id="humidity5"></p>
     <p id="temp5"></p><br>
 </div>
+</div>
+
 </section>
     <script src="script.js"></script>
 </body>
