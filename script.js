@@ -58,7 +58,7 @@ function getdata() {
 
 
         }
-        const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
 
         fetch(url)
             // fetch(apiUrl)
@@ -74,7 +74,7 @@ function getdata() {
                 wind1 = (weatherdata[0].wind.speed);
                 humidity1 = (weatherdata[0].main.humidity);
                 temp1 = (weatherdata[0].main.temp);
-                icone1 = `http://openweathermap.org/img/wn/${weatherdata[0].weather[0].icon}@2x.png`;
+                icone1 = `https://openweathermap.org/img/wn/${weatherdata[0].weather[0].icon}@2x.png`;
                 document.getElementById("date1").innerHTML = country + ":  " + date1;
                 document.getElementById("wind1").innerHTML = "Wind:" + wind1 + " MPS";
                 document.getElementById("icon1").src = icone1;
@@ -86,7 +86,7 @@ function getdata() {
                 wind2 = (weatherdata[8].wind.speed);
                 humidity2 = (weatherdata[8].main.humidity);
                 temp2 = (weatherdata[8].main.temp);
-                icone2 = `http://openweathermap.org/img/wn/${weatherdata[8].weather[0].icon}@2x.png`;
+                icone2 = `https://openweathermap.org/img/wn/${weatherdata[8].weather[0].icon}@2x.png`;
                 document.getElementById("date2").innerHTML = date2;
                 document.getElementById("wind2").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icon2").src = icone2;
@@ -97,7 +97,7 @@ function getdata() {
                 wind3 = (weatherdata[16].wind.speed);
                 humidity3 = (weatherdata[16].main.humidity);
                 temp3 = (weatherdata[16].main.temp);
-                icone3 = `http://openweathermap.org/img/wn/${weatherdata[16].weather[0].icon}@2x.png`;
+                icone3 = `https://openweathermap.org/img/wn/${weatherdata[16].weather[0].icon}@2x.png`;
                 document.getElementById("date3").innerHTML = date3;
                 document.getElementById("wind3").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icon3").src = icone3;
@@ -108,7 +108,7 @@ function getdata() {
                 wind4 = (weatherdata[24].wind.speed);
                 humidity4 = (weatherdata[24].main.humidity);
                 temp4 = (weatherdata[24].main.temp);
-                icone4 = `http://openweathermap.org/img/wn/${weatherdata[24].weather[0].icon}@2x.png`;
+                icone4 = `https://openweathermap.org/img/wn/${weatherdata[24].weather[0].icon}@2x.png`;
                 document.getElementById("date4").innerHTML = date4;
                 document.getElementById("wind4").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icon4").src = icone4;
@@ -119,7 +119,7 @@ function getdata() {
                 wind5 = (weatherdata[33].wind.speed);
                 humidity5 = (weatherdata[33].main.humidity);
                 temp5 = (weatherdata[33].main.temp);
-                icone5 = `http://openweathermap.org/img/wn/${weatherdata[33].weather[0].icon}@2x.png`;
+                icone5 = `https://openweathermap.org/img/wn/${weatherdata[33].weather[0].icon}@2x.png`;
                 document.getElementById("date5").innerHTML = date5;
                 document.getElementById("wind5").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icon5").src = icone5;
@@ -153,7 +153,7 @@ function handleSearchHistoryClick(e) {
 
         var country = e.target.textContent;
 
-        const url = `http://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${country}&appid=826c4a5299f1929f7d07c483556cc38d&cnt=50&units=imperial&lang=en`;
 
         fetch(url)
             // fetch(apiUrl)
@@ -170,7 +170,7 @@ function handleSearchHistoryClick(e) {
                 wind1 = (weatherdata[0].wind.speed);
                 humidity1 = (weatherdata[0].main.humidity);
                 temp1 = (weatherdata[0].main.temp);
-                icone1 = `http://openweathermap.org/img/wn/${weatherdata[0].weather[0].icon}@2x.png`;
+                icone1 = `https://openweathermap.org/img/wn/${weatherdata[0].weather[0].icon}@2x.png`;
                 document.getElementById("date1").innerHTML = country + ":  " + date1;
                 document.getElementById("wind1").innerHTML = "Wind:" + wind1 + " MPS";
                 document.getElementById("icon1").src = icone1;
@@ -183,7 +183,7 @@ function handleSearchHistoryClick(e) {
                 wind2 = (weatherdata[8].wind.speed);
                 humidity2 = (weatherdata[8].main.humidity);
                 temp2 = (weatherdata[8].main.temp);
-                icone2 = `http://openweathermap.org/img/wn/${weatherdata[8].weather[0].icon}@2x.png`;
+                icone2 = `https://openweathermap.org/img/wn/${weatherdata[8].weather[0].icon}@2x.png`;
                 document.getElementById("date2").innerHTML = date2;
                 document.getElementById("wind2").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icone2").src = icone2;
@@ -194,7 +194,7 @@ function handleSearchHistoryClick(e) {
                 wind3 = (weatherdata[16].wind.speed);
                 humidity3 = (weatherdata[16].main.humidity);
                 temp3 = (weatherdata[16].main.temp);
-                icone3 = `http://openweathermap.org/img/wn/${weatherdata[16].weather[0].icon}@2x.png`;
+                icone3 = `https://openweathermap.org/img/wn/${weatherdata[16].weather[0].icon}@2x.png`;
                 document.getElementById("date3").innerHTML = date3;
                 document.getElementById("wind3").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icon3").src = icon3;
@@ -205,7 +205,7 @@ function handleSearchHistoryClick(e) {
                 wind4 = (weatherdata[24].wind.speed);
                 humidity4 = (weatherdata[24].main.humidity);
                 temp4 = (weatherdata[24].main.temp);
-                icone4 = `http://openweathermap.org/img/wn/${weatherdata[24].weather[0].icon}@2x.png`;
+                icone4 = `https://openweathermap.org/img/wn/${weatherdata[24].weather[0].icon}@2x.png`;
                 document.getElementById("date4").innerHTML = date4;
                 document.getElementById("wind4").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icone4").src = icone4;
@@ -216,7 +216,7 @@ function handleSearchHistoryClick(e) {
                 wind5 = (weatherdata[33].wind.speed);
                 humidity5 = (weatherdata[33].main.humidity);
                 temp5 = (weatherdata[33].main.temp);
-                icone5 = `http://openweathermap.org/img/wn/${weatherdata[33].weather[0].icon}@2x.png`;
+                icone5 = `https://openweathermap.org/img/wn/${weatherdata[33].weather[0].icon}@2x.png`;
                 document.getElementById("date5").innerHTML = date5;
                 document.getElementById("wind5").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icone5").src = icone5;
