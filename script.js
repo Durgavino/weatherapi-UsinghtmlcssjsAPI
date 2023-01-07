@@ -115,11 +115,11 @@ function getdata() {
                 document.getElementById("humidity4").innerHTML = "Humidity:" + humidity4 + "%";
                 document.getElementById("temp4").innerHTML = "Temp:" + temp4 + " °F";
 
-                date5 = (weatherdata[27].dt_txt);
-                wind5 = (weatherdata[27].wind.speed);
-                humidity5 = (weatherdata[27].main.humidity);
-                temp5 = (weatherdata[27].main.temp);
-                icone5 = `http://openweathermap.org/img/wn/${weatherdata[27].weather[0].icon}@2x.png`;
+                date5 = (weatherdata[33].dt_txt);
+                wind5 = (weatherdata[33].wind.speed);
+                humidity5 = (weatherdata[33].main.humidity);
+                temp5 = (weatherdata[33].main.temp);
+                icone5 = `http://openweathermap.org/img/wn/${weatherdata[33].weather[0].icon}@2x.png`;
                 document.getElementById("date5").innerHTML = date5;
                 document.getElementById("wind5").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icon5").src = icone5;
@@ -213,11 +213,11 @@ function handleSearchHistoryClick(e) {
                 document.getElementById("humidity4").innerHTML = "Humidity:" + humidity4 + "%";
                 document.getElementById("temp4").innerHTML = "Temp:" + temp4 + " °F";
 
-                date5 = (weatherdata[27].dt_txt);
-                wind5 = (weatherdata[27].wind.speed);
-                humidity5 = (weatherdata[27].main.humidity);
-                temp5 = (weatherdata[27].main.temp);
-                icone5 = `http://openweathermap.org/img/wn/${weatherdata[27].weather[0].icon}@2x.png`;
+                date5 = (weatherdata[33].dt_txt);
+                wind5 = (weatherdata[33].wind.speed);
+                humidity5 = (weatherdata[33].main.humidity);
+                temp5 = (weatherdata[33].main.temp);
+                icone5 = `http://openweathermap.org/img/wn/${weatherdata[33].weather[0].icon}@2x.png`;
                 document.getElementById("date5").innerHTML = date5;
                 document.getElementById("wind5").innerHTML = "Wind:" + wind2 + " MPS";
                 document.getElementById("icone5").src = icone5;
