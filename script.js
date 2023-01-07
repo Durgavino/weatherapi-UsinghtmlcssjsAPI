@@ -2,7 +2,6 @@
 //key=826c4a5299f1929f7d07c483556cc38d
 
 
-
 var search = document.getElementById('search');
 
 function getdata() {
@@ -146,11 +145,11 @@ getdata();
 
 searchresult.addEventListener('click', handleSearchHistoryClick);
 function handleSearchHistoryClick(e) {
-    // Don't do search if current elements is not a search history button
+    
     if (!e.target.matches('.btn-history')) {
         return;
     } else {
-        // set search bar to country name and then re-call your weather function by passing in new country name 
+       
         //var country = document.getElementById("country").value;
 
         var country = e.target.textContent;
