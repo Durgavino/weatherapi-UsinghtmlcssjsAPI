@@ -27,4 +27,5 @@ Followed Websites like https://www.w3schools.com/ , https://css-tricks.com/ http
 MIT License
 
 ##Deployed URL
+
 https://durgavino.github.io/weatherapi-UsinghtmlcssjsAPI/
