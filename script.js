@@ -131,7 +131,6 @@ function getdata() {
                 console.log(err);
 
             }
-
             );
 
     }
